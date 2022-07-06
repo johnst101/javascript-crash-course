@@ -104,3 +104,11 @@ for (let i = 1; i <= 20; i++) {
     console.log(`${i} -> ${i}`)
   }
 }
+
+// Printout every character from the string: "Frontend Simplified"
+
+const string = "Frontend Simplified"
+
+for (let i = 0; i < string.length; i++) {
+  console.log(string[i])
+}
