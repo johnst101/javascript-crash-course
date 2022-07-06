@@ -33,3 +33,19 @@ else if (loggedIn === true) {
 else {
   console.log('tell user to log into account')
 }
+
+// Practice Conditions
+
+let cash = 100;
+let price = 200;
+let change = cash - price;
+
+if (change > 0) {
+  console.log(`you paid extra - here's ${change} dollars change`)
+}
+else if (cash === price) {
+  console.log("you paid the exact amount, have a nice day!")
+}
+else {
+  console.log(`not enough money - you still owe ${change * -1} dollars`)
+}
