@@ -49,3 +49,23 @@ else if (cash === price) {
 else {
   console.log(`not enough money - you still owe ${change * -1} dollars`)
 }
+
+
+// Ternary Operators
+
+let hot = true
+
+hot ? console.log('weather is hot outside') : console.log('weather is cold outside')
+
+let subscribe = false;
+let logIn = true;
+
+let str = subscribe || logIn ? 'show the video' : 'hide the video';
+console.log(str);
+
+let money = 50;
+let cost = 40;
+let isStoreOpen = true;
+
+let stri = isStoreOpen && money >= cost ? 'give receipt' : 'do not give receipt';
+console.log(stri);
