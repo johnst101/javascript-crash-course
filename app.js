@@ -112,3 +112,15 @@ const string = "Frontend Simplified"
 for (let i = 0; i < string.length; i++) {
   console.log(string[i])
 }
+
+// Functions
+
+// Function definition
+function welcomePersonTToFES(firstName, lastName) {
+  console.log(`Welcome to FES, ${firstName} ${lastName}`)
+}
+
+// Call the function
+welcomePersonTToFES('Tyler', 'Johnson');
+welcomePersonTToFES('David', 'Bragg');
+welcomePersonTToFES('Zen', 'Doe');
