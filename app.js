@@ -299,3 +299,26 @@ register({
 });
 
 console.log(users);
+
+// Document Object Model
+// First way of accessing an element
+// console.log(document.querySelector('#title'))
+
+// // Second way of accessing an element (only if the element has an id)
+// console.log(document.getElementById('title'))
+
+// // how to change html with DOM (used for dynamically showing account details on a page)
+// document.querySelector('#title').innerHTML = 'Frontend Simplified'
+// document.querySelector('#title').innerHTML += ' Tyler Johnson'
+
+// //Change CSS
+// document.querySelector('#title').style.color = 'green'
+
+// //Changing element style by clicking buttons
+// function changeTitleToRed() {
+//   document.querySelector('#title').style.color = 'red'
+// }
+
+function toggleDarkMode() {
+  document.querySelector('body').classList.toggle("dark-theme")
+}
