@@ -1,8 +1,8 @@
 /**
  * Converting Temperatures
- * 
+ *
  * Celsius-to-Fahrenheit formula:
- * 
+ *
  *  F = C x 1.8 + 32
  */
 
@@ -13,25 +13,23 @@ console.log(fahrenheit);
 
 // EQUALITY TEST
 
-let bool = '1' == 1;
-let bool2 = '1' === 1;
+let bool = "1" == 1;
+let bool2 = "1" === 1;
 
 console.log(bool);
 console.log(bool2);
 
 // Conditions
 
-let subscribed = false
-let loggedIn = true
+let subscribed = false;
+let loggedIn = true;
 
 if (subscribed === true) {
-  console.log('show the video')
-}
-else if (loggedIn === true) {
-  console.log('tell the user to upgrade their subscription')
-}
-else {
-  console.log('tell user to log into account')
+  console.log("show the video");
+} else if (loggedIn === true) {
+  console.log("tell the user to upgrade their subscription");
+} else {
+  console.log("tell user to log into account");
 }
 
 // Practice Conditions
@@ -41,33 +39,33 @@ let price = 200;
 let change = cash - price;
 
 if (change > 0) {
-  console.log(`you paid extra - here's ${change} dollars change`)
+  console.log(`you paid extra - here's ${change} dollars change`);
+} else if (cash === price) {
+  console.log("you paid the exact amount, have a nice day!");
+} else {
+  console.log(`not enough money - you still owe ${change * -1} dollars`);
 }
-else if (cash === price) {
-  console.log("you paid the exact amount, have a nice day!")
-}
-else {
-  console.log(`not enough money - you still owe ${change * -1} dollars`)
-}
-
 
 // Ternary Operators
 
-let hot = true
+let hot = true;
 
-hot ? console.log('weather is hot outside') : console.log('weather is cold outside')
+hot
+  ? console.log("weather is hot outside")
+  : console.log("weather is cold outside");
 
 let subscribe = false;
 let logIn = true;
 
-let str = subscribe || logIn ? 'show the video' : 'hide the video';
+let str = subscribe || logIn ? "show the video" : "hide the video";
 console.log(str);
 
 let money = 50;
 let cost = 40;
 let isStoreOpen = true;
 
-let stri = isStoreOpen && money >= cost ? 'give receipt' : 'do not give receipt';
+let stri =
+  isStoreOpen && money >= cost ? "give receipt" : "do not give receipt";
 console.log(stri);
 
 // Loops
@@ -92,59 +90,101 @@ console.log(stri);
 
 for (let i = 1; i <= 20; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log(`${i} -> Frontend Simplified`)
-  }
-  else if (i % 3 === 0) {
-    console.log(`${i} -> Frontend`)
-  }
-  else if (i % 5 === 0) {
-    console.log(`${i} -> Simplified`)
-  }
-  else {
-    console.log(`${i} -> ${i}`)
+    console.log(`${i} -> Frontend Simplified`);
+  } else if (i % 3 === 0) {
+    console.log(`${i} -> Frontend`);
+  } else if (i % 5 === 0) {
+    console.log(`${i} -> Simplified`);
+  } else {
+    console.log(`${i} -> ${i}`);
   }
 }
 
 // Printout every character from the string: "Frontend Simplified"
 
-const string = "Frontend Simplified"
+const string = "Frontend Simplified";
 
 for (let i = 0; i < string.length; i++) {
-  console.log(string[i])
+  console.log(string[i]);
 }
 
 // Functions
 
 // Function definition
 function welcomePersonTToFES(firstName, lastName) {
-  console.log(`Welcome to FES, ${firstName} ${lastName}`)
+  console.log(`Welcome to FES, ${firstName} ${lastName}`);
 }
 
 // Call the function
-welcomePersonTToFES('Tyler', 'Johnson');
-welcomePersonTToFES('David', 'Bragg');
-welcomePersonTToFES('Zen', 'Doe');
+welcomePersonTToFES("Tyler", "Johnson");
+welcomePersonTToFES("David", "Bragg");
+welcomePersonTToFES("Zen", "Doe");
 
 /** Create a function that converts Celsius to Fahrenheit
- * 
+ *
  * Celsius to Fahrenheit formula:
  *  F = C x  1.8 + 32
- * 
+ *
  */
 
 function celsiusToFahrenheit(celsius) {
-  return celsius * 1.8 + 32
+  return celsius * 1.8 + 32;
 }
 
-console.log(celsiusToFahrenheit(0))
-console.log(celsiusToFahrenheit(10))
-console.log(celsiusToFahrenheit(30))
+console.log(celsiusToFahrenheit(0));
+console.log(celsiusToFahrenheit(10));
+console.log(celsiusToFahrenheit(30));
 
 // Arrow Function
 const convertCelsiusToFahrenheit = (celsius) => {
-  return celsius * 1.8 + 32
-}
+  return celsius * 1.8 + 32;
+};
 
-console.log(convertCelsiusToFahrenheit(0))
+console.log(convertCelsiusToFahrenheit(0));
 
 // Arrays
+
+let arr = [20, 30, 40, 50, 100];
+
+// first element of array
+console.log(arr[0]);
+
+// last element of array
+console.log(arr[arr.length - 1]);
+
+arr.push(200)
+
+// array filter method
+let newArr = arr.filter((element) => {
+  console.log(element)
+  if (element < 50) {
+    return true;
+  }
+})
+
+console.log(newArr)
+
+// same thing as the array filter method above just simpler
+let newerArr = arr.filter(element => element < 50)
+
+console.log(newerArr)
+
+console.log(arr)
+
+/**
+ * Filter out all the 'Fail' elements in an array
+ */
+
+let grades = ['A+', 'A', 'FAIL']
+
+let goodGrades = grades.filter((element) => {
+  if (element !== 'FAIL') {
+    return true;
+  }
+})
+
+console.log(goodGrades)
+
+let passGrades = grades.filter(element => element !== 'FAIL')
+
+console.log(passGrades)
