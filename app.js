@@ -183,8 +183,52 @@ let goodGrades = grades.filter((element) => {
   }
 })
 
-console.log(goodGrades)
+console.log(goodGrades);
 
-let passGrades = grades.filter(element => element !== 'FAIL')
+let passGrades = grades.filter(element => element !== 'FAIL');
 
-console.log(passGrades)
+console.log(passGrades);
+
+// Loop over every element in an array
+
+let loopGrades = ['A+', 'A', 'FAIL'];
+
+let goodLoopGrades = [];
+
+for (let i = 0; i < loopGrades.length; ++i) {
+  if (loopGrades[i] !== 'FAIL') {
+    goodLoopGrades.push(loopGrades[i]);
+  }
+};
+
+console.log(goodLoopGrades);
+
+// .map method (accepts callback) used to turn the current element into whatever we return
+
+let array = [1, 4, 9, 16];
+
+let newArray = array.map(element => undefined);
+
+console.log(newArray);
+
+/**
+ * Turn each element in an array of dollars into cents
+ */
+
+let dollars = [1, 5, 10, 3];
+
+let cents = dollars.map(element => element * 100);
+
+console.log(cents);
+
+// Same question as above without using the map method
+
+let newDollars = [1, 5, 10, 3];
+
+let newCents = [];
+
+for (let i = 0; i < newDollars.length; ++i) {
+  newCents.push(newDollars[i] * 100);
+};
+
+console.log(newCents);
