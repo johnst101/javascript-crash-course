@@ -152,54 +152,54 @@ console.log(arr[0]);
 // last element of array
 console.log(arr[arr.length - 1]);
 
-arr.push(200)
+arr.push(200);
 
 // array filter method
 let newArr = arr.filter((element) => {
-  console.log(element)
+  console.log(element);
   if (element < 50) {
     return true;
   }
-})
+});
 
-console.log(newArr)
+console.log(newArr);
 
 // same thing as the array filter method above just simpler
-let newerArr = arr.filter(element => element < 50)
+let newerArr = arr.filter((element) => element < 50);
 
-console.log(newerArr)
+console.log(newerArr);
 
-console.log(arr)
+console.log(arr);
 
 /**
  * Filter out all the 'Fail' elements in an array
  */
 
-let grades = ['A+', 'A', 'FAIL']
+let grades = ["A+", "A", "FAIL"];
 
 let goodGrades = grades.filter((element) => {
-  if (element !== 'FAIL') {
+  if (element !== "FAIL") {
     return true;
   }
-})
+});
 
 console.log(goodGrades);
 
-let passGrades = grades.filter(element => element !== 'FAIL');
+let passGrades = grades.filter((element) => element !== "FAIL");
 
 console.log(passGrades);
 
 // Loop over every element in an array
 
-let loopGrades = ['A+', 'A', 'FAIL'];
+let loopGrades = ["A+", "A", "FAIL"];
 
 let goodLoopGrades = [];
 
 for (let i = 0; i < loopGrades.length; ++i) {
-  if (loopGrades[i] !== 'FAIL') {
+  if (loopGrades[i] !== "FAIL") {
     goodLoopGrades.push(loopGrades[i]);
   }
-};
+}
 
 console.log(goodLoopGrades);
 
@@ -207,7 +207,7 @@ console.log(goodLoopGrades);
 
 let array = [1, 4, 9, 16];
 
-let newArray = array.map(element => undefined);
+let newArray = array.map((element) => undefined);
 
 console.log(newArray);
 
@@ -217,7 +217,7 @@ console.log(newArray);
 
 let dollars = [1, 5, 10, 3];
 
-let cents = dollars.map(element => element * 100);
+let cents = dollars.map((element) => element * 100);
 
 console.log(cents);
 
@@ -229,6 +229,73 @@ let newCents = [];
 
 for (let i = 0; i < newDollars.length; ++i) {
   newCents.push(newDollars[i] * 100);
-};
+}
 
 console.log(newCents);
+
+// Objects
+
+let users = [
+  {
+    userFirst: "Tyler",
+    email: "tyler@example.com",
+    password: "test123",
+    subscriptionStatus: "VIP",
+    discordId: "Tyler Johnson#001",
+    lessonsCompleted: [0, 1],
+  },
+  {
+    userFirst: "David",
+    email: "david@example.com",
+    password: "test135",
+    subscriptionStatus: "VIP",
+    discordId: "David Bragg#001",
+    lessonsCompleted: [0, 1, 2, 3, 4],
+  },
+];
+
+function login(email, password) {
+  for (let i = 0; i < users.length; ++i) {
+    if (users[i].email === email) {
+      console.log(users[i]);
+      if (users[i].password === password) {
+        console.log("log the user in - the deatils are correct");
+      } else {
+        console.log("password is incorrect - try again");
+      }
+      return;
+    }
+  }
+  console.log("could not find an email that matches");
+}
+
+login("tyler@example.com", "test123");
+
+/**
+ * Create a register funciton that accepts:
+ * - userFirst
+ * - email
+ * - password
+ * - subscriptionStatus
+ * - discordId
+ * - lessonsCompleted
+ *
+ * Inside your register function:
+ * 1. Create a user object
+ * 2. Push this user object onto the 'users' array
+ */
+
+function register(user) {
+  users.push(user);
+}
+
+register({
+  userFirst: "John", 
+  email: "johndoe@example.com", 
+  password: "test", 
+  subscriptionStatus: "Normal", 
+  discordId: "John Doe#002", 
+  lessonsCompleted: []
+});
+
+console.log(users);
